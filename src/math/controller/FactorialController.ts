@@ -3,15 +3,17 @@ import { FactorialService } from '../service/FactorialService';
 
 class FactorialController {
   async handle(request: Request, response: Response) {
-    const { number } = request.query;
+    const { number: numberQuery } = request.query;
 
-    if (!number) {
+    if (!numberQuery) {
       return response.status(400).json({
-        result: `Parameter 'number' is mandatory.`,
+        result: `'number' parameter is mandatory.`,
       });
     }
 
-    const result = new FactorialService().execute(number as string);
+    const number = numberQuery as string;
+
+    const result = new FactorialService().execute(number);
 
     return response.json({
       result,

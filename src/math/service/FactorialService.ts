@@ -5,15 +5,15 @@ class FactorialService {
     const number = parseInt(value);
 
     if (!number) {
-      return `${value} is not a number`;
+      return `'number' parameter is not a number`;
     }
 
     if (number < 0) {
-      return `Number must be positive`;
+      return `'number' parameter must be positive`;
     }
 
     if (number > 150) {
-      return `Number must be less or equal to 150`;
+      return `'number' parameter must be less or equal to 150`;
     }
 
     return factorial(number);

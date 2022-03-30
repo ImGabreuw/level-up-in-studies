@@ -7,7 +7,7 @@ class DecimalNumberSystemController {
 
     if (!numberQuery || !baseQuery) {
       return response.status(400).json({
-        result: `'number' and 'base' are mandatory`,
+        result: `'number' and 'base' parameters are mandatory`,
       });
     }
 
