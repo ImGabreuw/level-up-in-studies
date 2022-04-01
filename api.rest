@@ -1,0 +1,2 @@
+### Scientific Notation
+GET http://localhost:3000/math/scientific_notation?number=298673.238
